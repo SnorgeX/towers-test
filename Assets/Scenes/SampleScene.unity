@@ -477,7 +477,7 @@ MonoBehaviour:
   _towerFemalePrefab: {fileID: 3048718071640912873, guid: 0d48d163593657148857b3e2d94bd012, type: 3}
   _startCannon: {fileID: 11400000, guid: 8dcf71f6d56029c44a53c90254f1a019, type: 2}
   _distanceInUnits: 30
-  State: 0
+  State: 1
 --- !u!4 &699154743
 Transform:
   m_ObjectHideFlags: 0

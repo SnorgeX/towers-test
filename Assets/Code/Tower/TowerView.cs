@@ -38,7 +38,7 @@ public class TowerView : MonoBehaviour, IDamagable
     public void CreateCannon(CannonModel cannonModel, ICannonInput input)
     {
         var newcannon = Instantiate(cannonPrefub, _cannonPositions[_cannons.Count]);
-        newcannon.transform.rotation = Quaternion.Euler(0,0,90);
+        newcannon.CannonPivot.transform.rotation = Quaternion.Euler(0,0,90);
         newcannon.Init(cannonModel, input);
 
         _cannons.Add(newcannon);
@@ -46,7 +46,7 @@ public class TowerView : MonoBehaviour, IDamagable
         input.View = newcannon;
     }
 
-    public void CreateShield(Vector3 position, Button shieldButton)
+    public ShieldView CreateShield(Vector3 position, Button shieldButton)
     {
         _shield = Instantiate(_shield, position, Quaternion.identity);
         _shield.Activate();
@@ -55,7 +55,7 @@ public class TowerView : MonoBehaviour, IDamagable
         _shieldButton.parent.Q<Label>().style.visibility = Visibility.Hidden;
         _shieldButton.clicked += _shield.Activate;
         _shield.ButtonAvalibleChanged += ChangeShieldButtonView;
-
+        return _shield;
     }
 
     private void OnDestroy()

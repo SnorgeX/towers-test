@@ -39,8 +39,7 @@ public class PlayerInput : ICannonInput
             if (touch.fingerId == _touchId && touch.phase == TouchPhase.Moved)
             {
                 var touchPosition = getTouchPosition(touch.position);
-                var targetRotation = Quaternion.LookRotation(Vector3.forward, View._cannonPivot.position - (Vector3)touchPosition);
-                //_cannon.UpdateTargetRotation(targetRotation * Quaternion.Euler(0, 0, -90f));
+                var targetRotation = Quaternion.LookRotation(Vector3.forward, View.CannonPivot.position - (Vector3)touchPosition);
                 TargetRotationUpdated?.Invoke(targetRotation * Quaternion.Euler(0, 0, -90f));
             }
             if (touch.fingerId == _touchId && touch.phase == TouchPhase.Ended)

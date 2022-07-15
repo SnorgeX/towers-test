@@ -76,7 +76,7 @@ public class AIInput : ICannonInput
 
     private float SetShootVelocity(float degrees, Vector3 targetPosition)
     {
-        var fromTo = targetPosition - View._cannonPivot.position;
+        var fromTo = targetPosition - View.CannonPivot.position;
         var x = fromTo.x;
         var y = fromTo.y;
         var angleRad = degrees * Mathf.PI / 180;

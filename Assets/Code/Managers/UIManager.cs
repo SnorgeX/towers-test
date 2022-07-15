@@ -27,7 +27,6 @@ public class UIManager : MonoBehaviour
 
         _pauseButton = rootVisualElement.Q<Button>("pause-button");
         _pauseButton.clicked += PauseButtonPressed;
-
         _pauseMenu = rootVisualElement.Q<TemplateContainer>("PauseUI");
 
         _restartButton = rootVisualElement.Q<Button>("restart-button");
@@ -38,7 +37,7 @@ public class UIManager : MonoBehaviour
 
 
     }
-
+    
     private void PauseButtonPressed()
     {
         _pauseMenu.style.display = DisplayStyle.Flex;
@@ -77,5 +76,10 @@ public class UIManager : MonoBehaviour
         parent.Add(buttonContainer);
         return buttonContainer.Q<Button>("shield-button");
     }
-
+    private void OnDestroy()
+    {
+        _pauseButton.clicked -= PauseButtonPressed;
+        _restartButton.clicked -= RestartButtonPressed;
+        _resumeButton.clicked -= ResumeButtonPressed;
+    }
 }

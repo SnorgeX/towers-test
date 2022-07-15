@@ -131,7 +131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _startCannon: {fileID: 11400000, guid: 8dcf71f6d56029c44a53c90254f1a019, type: 2}
   _shootPosition: {fileID: 185784244390629636}
-  _cannonPivot: {fileID: 4575769495691356767}
+  CannonPivot: {fileID: 4575769495691356767}
   _target: {fileID: 0}
 --- !u!1 &6600382975654078782
 GameObject:

@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
 
     private List<TowerView> _towerFirstTeam;
     private List<TowerView> _towerSecondTeam;
+    private CorutineShieldController _corutineShield; 
 
     private bool _isPaused;
     public static event Action<GameState> OnGameStateChanged;
@@ -26,6 +27,8 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
+        var emptyGO = new GameObject();
+        _corutineShield = emptyGO.AddComponent<CorutineShieldController>();
         Instance = this;
         _towerFirstTeam = new List<TowerView>();
         _towerSecondTeam = new List<TowerView>();
@@ -114,7 +117,10 @@ public class GameManager : MonoBehaviour
 
         var shieldButton = (_uiManager.CreateShieldButton(_uiManager.rightShieldContainer));
         shieldButton.parent.style.display = DisplayStyle.None;
-        tower.CreateShield(new Vector3(_distanceInUnits / 2 - modelSize, 0, 0), shieldButton);
+
+
+        var shield = tower.CreateShield(new Vector3(_distanceInUnits / 2 - modelSize, 0, 0), shieldButton);
+        _corutineShield.Init(shield, 2, 10);
     }
 
     private void CreatePlayerCannon(TowerView tower)
