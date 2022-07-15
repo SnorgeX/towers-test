@@ -1,0 +1,12 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/GameUI.uss?fileID=7433441132597879392&amp;guid=8c7a491b744e2ef4987ec596a1507686&amp;type=3#GameUI" />
+    <ui:VisualElement name="pause-screen" style="flex-grow: 1; align-items: center; justify-content: center; background-color: rgba(0, 0, 0, 0.08);">
+        <ui:VisualElement name="pause-panel" style="width: 50%; height: auto; border-top-left-radius: 20px; border-bottom-left-radius: 20px; border-top-right-radius: 20px; border-bottom-right-radius: 20px; background-color: rgb(255, 255, 255); align-items: center; justify-content: center;">
+            <ui:VisualElement name="ContentHolder" style="height: auto; width: 80%; align-items: center; justify-content: center; margin-left: 5px; margin-right: 5px; margin-top: 5px; margin-bottom: 5px;">
+                <ui:Label text="Pause" display-tooltip-when-elided="true" name="pause-label" style="-unity-font: url(&apos;project://database/Assets/Fonts/supercell-magic.ttf?fileID=12800000&amp;guid=6086ad674d4b4c34e8eaed28fef00825&amp;type=3#supercell-magic&apos;); color: rgb(232, 66, 66); -unity-font-definition: none; font-size: 34px; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; height: auto; width: 100%; -unity-text-align: upper-center;" />
+                <ui:Button text="Restart" display-tooltip-when-elided="true" name="restart-button" class="menu-button" />
+                <ui:Button text="Resume" display-tooltip-when-elided="true" name="resume-button" class="menu-button" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

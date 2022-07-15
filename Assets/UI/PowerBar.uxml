@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Assets/UI/PowerBar.uss?fileID=7433441132597879392&amp;guid=9511afa9a2f9c2a4689ef3a3d6e5112d&amp;type=3#PowerBar" />
+    <ui:VisualElement name="BarBG" class="BarBG" style="align-items: stretch; flex-grow: 1;">
+        <ui:VisualElement name="BarColor" class="BarColor" style="flex-grow: 1;" />
+    </ui:VisualElement>
+</ui:UXML>

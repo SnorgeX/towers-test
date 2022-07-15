@@ -1,0 +1,22 @@
+.BarBG {
+    background-color: rgb(84, 84, 84);
+    flex-grow: 1;
+    flex-direction: column;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.BarColor {
+    flex-grow: 1;
+    background-color: rgb(173, 255, 146);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
